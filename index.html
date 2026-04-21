@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRass Cyber Range Tool</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        input, select {
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            margin: 5px;
+            width: 220px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #00ffcc;
+            border: none;
+            border-radius: 8px;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #00ccaa;
+        }
+
+        .result-box {
+            background-color: rgba(0,0,0,0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🛡️ CRass Cyber Range (Attack-Defense Simulator)</h1>
+
+    <form method="POST">
+        <input type="text" name="target" placeholder="Enter IP Address" required>
+        <br>
+
+        <select name="mode">
+            <option value="attack">⚔️ Attack Mode</option>
+            <option value="defense">🛡️ Defense Mode</option>
+        </select>
+
+        <select name="scan_type">
+            <option value="quick">Quick Scan</option>
+            <option value="service">Service Detection</option>
+            <option value="os">OS Detection</option>
+            <option value="full">Full Scan</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit" onclick="showLoading()">Run</button>
+    </form>
+
+    <p id="loading" style="display:none;">⏳ Processing... please wait</p>
+
+    <div class="result-box">
+        <pre>{{ result }}</pre>
+    </div>
+
+    <br>
+
+    <a href="/download">
+        <button>Download Report</button>
+    </a>
+
+    <script>
+        function showLoading() {
+            document.getElementById("loading").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
