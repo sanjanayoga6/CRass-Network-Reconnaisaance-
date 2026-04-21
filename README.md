@@ -87,7 +87,6 @@ python app.py
 http://127.0.0.1:5000
 ```
 
----
 
 ## 📊 Features Summary
 
@@ -98,17 +97,12 @@ http://127.0.0.1:5000
 * Intelligent security recommendations
 * Downloadable scan reports
 
-```
----
-
 ## ⚠️ Limitations
 
 * Defense module is simulation-based
 * Requires Nmap installation
 * OS detection may require administrative privileges
 * Limited to single target scanning
-
----
 
 ## 🔮 Future Enhancements
 
@@ -118,15 +112,11 @@ http://127.0.0.1:5000
 * User authentication system
 * Real-time monitoring dashboard
 
----
-
 ## 📚 References
 
 * Nmap Official Documentation
 * Flask Documentation
 * Python Documentation
-
----
 
 ## ⭐ Note
 
